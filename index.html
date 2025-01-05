@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>/* General form styling */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        /* Input field styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="radio"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        /* Radio buttons inline */
+        label[for="male"], label[for="female"], label[for="others"] {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 16px;
+        }
+        
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            form {
+                padding: 10px;
+                width: 100%; /* Ensure the form takes full width on mobile */
+            }
+        
+            label {
+                font-size: 14px; /* Smaller text size for mobile screens */
+            }
+        
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            button {
+                font-size: 14px; /* Ensure inputs are more readable on small screens */
+            }
+        
+            /* Adjust the button's padding for better tapability */
+            button {
+                padding: 12px 15px;
+            }
+        }
+        </style>
+
+</head>
+<body>
+    <h1>code</h1>
+    <form action="register.php" method="post"> <!-- Updated the PHP file name to register.php -->
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <label>Gender</label>
+        <label for="male">
+            <input type="radio" id="male" name="gender" value="Male" required>
+            Male
+        </label>
+        <label for="female">
+            <input type="radio" id="female" name="gender" value="Female">
+            Female
+        </label>
+        <label for="others">
+            <input type="radio" id="others" name="gender" value="Others">
+            Others
+        </label>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="number">Phone Number</label>
+        <input type="text" id="number" name="number" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
